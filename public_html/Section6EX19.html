@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Section 6 EX19</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function fn(){
+                if(document.frm.op.value=="plus"){
+                    plusfn();
+                }else if(document.frm.op.value=='minus'){
+                    minusfn();
+                }else if(document.frm.op.value=='times'){
+                    timesfn();
+                }else if(document.frm.op.value=='divid'){
+                    dividfn();
+                }else if(document.frm.op.value=='remindar'){
+                    modulus();
+                }else if(document.getElementById('power').checked){
+                    powerfn();
+                }
+                
+            }
+            function timesfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= y*x;
+            }
+            function plusfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= y+x;
+            }
+            function minusfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x-y;
+            }
+            function dividfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x/y;
+            }
+            function powerfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= Math.pow(x,y);
+            }
+            function modulus(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x%y;
+            }
+        </script>
+        <form name='frm'>
+            <label>Enter x:</label><input name='x'><br>
+            <label>Enter y:</label><input name='y'><br>
+            <label>Select an operation:</label><br>
+            <input type='radio' name='op' value='plus'><Label>+</Label><br>
+            <input type='radio' name='op' value="minus"><Label>-</Label><br>
+            <input type='radio' name='op' value="times"><Label>*</Label><br>
+            <input type='radio' name='op' value="divid"><Label>/</Label><br>
+            <input type='radio' name='op' value="remindar"><Label>%</Label><br>
+            <input type='radio' name='op' value="power" id='power'><Label>^</Label><br>
+            <input type='button' name='calc' onclick="fn()" value="OK"><br>
+            <label>Result:</label><input name='result' disabled><br>
+        </form>
+    </body>
+</html>

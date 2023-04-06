@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Section 6 EX13</title>
+    </head>
+    <body>
+        <script language='javascript'>
+            function sum(){
+                document.frm.result.value= parseInt(document.frm.x.value) + 
+                        parseInt(document.frm.y.value) + parseInt(document.frm.z.value);
+            }
+        </script>
+        <form name='frm'>
+            <label>X:</label><input name='x'><br>
+            <label>Y:</label><input name='y'><br>
+            <label>Z:</label><input name='z'><br>
+            <input name='calc' type="button" onclick="sum()" value='add'><br>
+            <label>Result:</label><input name='result' disabled><br>
+        </form>
+    </body>
+</html>

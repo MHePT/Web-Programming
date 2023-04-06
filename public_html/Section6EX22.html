@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Section 6 Ex22</title>
+        <script>
+            function calc() {
+                if (document.fr.op.value == 200)
+                {
+                    res.value = 200 * disk.value * 0.9;
+                } else if (document.fr.op.value == 300)
+                {
+                    res.value = 300 * disk.value * 0.85;
+                } else if (document.fr.op.value == 400)
+                {
+                    res.value = 400 * parseInt(disk.value) * 0.8;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter number of hard disks:<input id="disk"><br><br>
+        Select Hard Disks<br><br>
+        <form name="fr">
+        <input type='radio' name='op' value=200><Label>80GB</Label><br>
+        <input type='radio' name='op' value=300><Label>120GB</Label><br>
+        <input type='radio' name='op' value=400><Label>300GB</Label><br><br>
+        <input type="button" value="Total Price" onclick="calc()"><br><br>
+        </form>
+        Total Price:<input id="res" disabled="">
+    </body>
+</html>

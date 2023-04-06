@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Section 6 Ex21</title>
+        <script>
+            function calc() {
+                if (se.value == 0.01)
+                {
+                    res.value = 10 + 0.01 * watt.value;
+                } else if (se.value == 0.2)
+                {
+                    res.value = 50 + 0.2 * watt.value;
+                } else if (se.value == 0.5)
+                {
+                    res.value = 75 + 0.5 * watt.value;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Enter Kilowatts used:<input id="watt"><br><br>
+        Select Customer Code:<select id="se">
+            <option value=0.01 >R</option>
+            <option value=0.2>C</option>
+            <option value=0.5>I</option>
+        </select><br><br>
+        <input type="button" value="Calculte Bill" onclick="calc()"><br><br>
+        Bill Value:<input id="res" disabled>
+    </body>
+</html>

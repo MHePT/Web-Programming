@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Section 6 EX14</title>
+    </head>
+    <body>
+        <script language='javascript'>
+            function reset(){
+                document.frm.x.value=null;
+                document.frm.y.value=null;
+                document.frm.z.value=null;
+                document.frm.result.value=null;
+            }
+            function area(){
+                a=parseInt(document.frm.a.value);
+                b=parseInt(document.frm.b.value);
+                c=parseInt(document.frm.c.value);
+                s= (a+b+c)*0.5;
+                document.frm.result.value = Math.pow(s*(s-a)*(s-b)*(s-c) ,0.5) ;
+            }
+        </script>
+        <form name='frm'>
+            <p>Calculate Triangle Area</p><br>
+            <label>A:</label><input name='a'><br>
+            <label>B:</label><input name='b'><br>
+            <label>C:</label><input name='c'><br>
+            <input name='calc' type="button" value='Calculate Area' onclick="area()"><input name='rest' type="button" value='Reset'onclick="reset()"><br>
+            <label>Area:</label><input name='result' disabled><br>
+        </form>
+    </body>
+</html>

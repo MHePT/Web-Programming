@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ibrahim Soliman</title>
+  </head>
+  <body>
+    <script lang="javascript">
+      function calculator(elem)
+      {
+          n1 = parseInt(document.calcform3.x.value);
+          n2 = parseInt(document.calcform3.y.value);
+          addition = n1 + n2;
+          subtraction = n1 - n2;
+          multuplication = n1 * n2;
+          division = n1 / n2;
+          reminder = n1 % n2;
+          power = Math.pow(n1,n2);
+          if (elem == add) {
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = addition;
+          }
+          if (elem == sub) {
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = subtraction;
+          }
+          if (elem == mult) {
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = multuplication;
+          }
+          if (elem == divi) {
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = division;
+          }
+          if (elem == rem){
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = reminder;
+          }
+          if (elem == pow) {
+            document.calcform3.result.value = "";
+            document.calcform3.result.value = power;
+          }
+      }
+    </script>
+    <form name="calcform3">
+      <label>Enter x: </label>
+      <input type="text" name="x" required /><br /><br />
+      <label>Enter y: </label>
+      <input type="text" name="y" required /><br /><br />
+      <input type="button" value="+" id="add" onclick="calculator(this)" />
+      <input type="button" value="-" id="sub" onclick="calculator(this)" />
+      <input type="button" value="*" id="mult" onclick="calculator(this)" />
+      <input type="button" value="/" id="divi" onclick="calculator(this)" />
+      <input type="button" value="%" id="rem" onclick="calculator(this)" />
+      <input type="button" value="^" id="pow" onclick="calculator(this)" />
+      <br /><br />
+      <label> Result: </label>
+      <input type="text" name="result" disabled />
+    </form>
+  </body>
+</html>

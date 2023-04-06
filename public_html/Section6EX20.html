@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Section 6 Ex20</title>
+        <style>
+            .butt{
+                position: relative;
+                left: 7%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script>
+            function calc(){
+                d.value = parseInt(r.value)*2;
+                p.value = parseInt(r.value)*2*Math.PI;
+                a.value = parseInt(r.value)*parseInt(r.value)*Math.PI;
+            }
+        </script>
+        <b>Circle Calculator</b><br><br>
+        Enter Radius:<input id="r"><br><br>
+        <input type="button" value="Calculate" class="butt" onclick="calc()"><br><br>
+        Diameter:<input id="d" disabled><br><br>
+        Circumference:<input id="p" disabled><br><br>
+        Area:<input id="a" disabled>
+    </body>
+</html>

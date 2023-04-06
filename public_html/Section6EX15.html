@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Section 6 EX15</title>
+    </head>
+    <body>
+        <script language="javascript">
+            function timesfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= y*x;
+            }
+            function plusfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= y+x;
+            }
+            function minusfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x-y;
+            }
+            function dividfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x/y;
+            }
+            function powerfn(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= Math.pow(x,y);
+            }
+            function modulus(){
+                x=parseInt(document.frm.x.value);
+                y=parseInt(document.frm.y.value);
+                document.frm.result.value= x%y;
+            }
+        </script>
+        <form name='frm'>
+            <label>Enter x:</label><input name='x'><br>
+            <label>Enter y:</label><input name='y'><br>
+            <input type='button' name='plus' onclick="plusfn()" value="+">
+            <input type='button' name='minus' onclick="minusfn()" value="-">
+            <input type='button' name='times' onclick="timesfn()" value="*">
+            <input type='button' name='divid' onclick="dividfn()" value="/">
+            <input type='button' name='remindar' onclick="modulus()" value="%">
+            <input type='button' name='power' onclick="powerfn()" value="^"><br>
+            <label>Result:</label><input name='result' disabled><br>
+        </form>
+    </body>
+</html>

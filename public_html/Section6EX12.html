@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Section 6 EX12</title>
+    </head>
+    <body>
+        <script>
+            function sqrt(){
+                document.frm.result.value= Math.sqrt(document.frm.number.value);
+            }
+        </script>
+        <form name='frm'>
+            <label>Enter number:</label><input name='number'><br>
+            <input type='button' name='calc' value="Calculate square root" onclick="sqrt()"><br>
+            <label>Result:</label><input name='result' disabled><br>
+        </form>
+    </body>
+</html>
